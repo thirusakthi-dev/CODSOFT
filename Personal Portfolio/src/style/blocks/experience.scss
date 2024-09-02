@@ -1,0 +1,50 @@
+@import "../abstract/variables.scss";
+
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.experience-head {
+  text-align: center;
+  padding: 0 0 1.5rem 0;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: $container-color;
+  border-radius: 1rem;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: clamp(0.8rem, 1vw, 0.93rem);
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(2, clamp(300px, 100%, 450px));
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.exp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.exp-firm {
+  font-family: $font-medium;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+}

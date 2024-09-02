@@ -1,0 +1,26 @@
+@import "../abstract/variables.scss";
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  gap: 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $container-color;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.project {
+}

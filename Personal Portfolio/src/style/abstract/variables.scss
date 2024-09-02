@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Outfit";
+  src: url(../../assets/fonts/Outfit-Medium.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../assets/fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/fonts/Poppins-SemiBold.ttf);
+}
+
+$container-color: hsl(219, 32%, 12%);
+$body-color: hsl(219, 48%, 8%);
+$light-bg-clr: hsl(219, 100%, 99%);
+$dark-bg-clr: hsl(219, 48%, 8%);
+$text-color-gray: hsl(219, 4%, 55%);
+$text-color: hsl(219, 8%, 75%);
+$text-color-dark: hsl(219, 15%, 15%);
+$text-color-light: hsl(0, 0%, 100%);
+$container-color-light: #e9e9e9;
+$default-color: #035cbb;
+
+$font-body: "Outfit";
+$font-normal: "Poppins";
+$font-medium: "Poppins-Medium";
+$font-semibold: "Poppins-SemiBold";
+
+$font-small-head: clamp(0.9rem, 1.1vw, 1.5rem);
+$font-sub-head: clamp(1.3rem, 1.6vw, 2rem);

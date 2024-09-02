@@ -1,0 +1,49 @@
+@import "../abstract/variables.scss";
+
+.footer-section {
+  background-color: $default-color;
+  display: flex;
+  flex-direction: column;
+
+  padding: 5rem 0 10rem 0;
+  align-items: center;
+  color: #000;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    &:hover {
+      color: white;
+      transition: all 0.5s;
+    }
+  }
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  li {
+    list-style: none;
+    background-color: black;
+    padding: 0.7rem;
+    border-radius: 2rem;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,41 @@
+@import "../style/abstract/variables.scss";
+
+.dark-mode {
+  background-color: $dark-bg-clr;
+  color: $text-color-light !important;
+  transition: all 1s;
+
+  #emailAlert {
+    background-color: $container-color;
+  }
+}
+.light-mode {
+  background-color: $light-bg-clr;
+  color: $text-color-dark;
+  transition: all 1s;
+
+  .skills-card,
+  .experience-card {
+    background-color: $container-color-light;
+  }
+  .skill-level {
+    color: $text-color-gray;
+  }
+  .contact-item {
+    background-color: $container-color-light;
+  }
+
+  .contact-form {
+    color: black;
+    label {
+      background-color: $light-bg-clr;
+      color: $text-color-dark;
+      transition: all 1s;
+    }
+  }
+
+  .submit-btn {
+    border-color: $dark-bg-clr;
+    color: $text-color-dark;
+  }
+}

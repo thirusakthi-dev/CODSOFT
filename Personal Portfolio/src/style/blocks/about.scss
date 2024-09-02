@@ -1,0 +1,68 @@
+@import "../abstract/variables.scss";
+.about-section {
+  // width: 76%;
+  margin: 0 auto;
+  // padding: 3rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 76%;
+  padding: 3rem 0;
+}
+
+figure {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 0 2.2rem;
+}
+
+.about-img {
+  width: clamp(260px, 100%, 340px);
+  height: auto;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.about-head {
+  text-align: center;
+  padding: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.about-container {
+  // display: flex;
+  // gap: 3.2rem;
+  // align-items: center;
+  display: flex;
+
+  //gap: 2rem;
+  align-items: center;
+}
+
+.about-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+
+  // display: flex;
+  // flex-direction: column;
+  // gap: 0.7rem;
+  // font-size: 1.2rem;
+  // list-style: none;
+  // align-items: center;
+  // justify-content: center;
+
+  // font-size: clamp(1rem, 1.3vw, 2rem);
+}
+
+.about-list li {
+  font-size: clamp(0.9rem, 1.2vw, 1.5rem);
+  &::before {
+    content: "⚡";
+  }
+}
