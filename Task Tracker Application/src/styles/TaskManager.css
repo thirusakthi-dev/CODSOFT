@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../assets/fonts/Poppins-Medium.ttf);
+}
+
+:root {
+  --font-family: "Poppins", "sans-serif", monospace;
+  --color-ongoing: #ff7f50;
+  --color-completed: #50c878;
+}
+
+html {
+  font-family: var(--font-family);
+}
+
+.header {
+  padding: 1rem;
+  background-color: #4848b2;
+  color: white;
+  display: flex;
+  justify-content: center;
+
+  > :last-child {
+    margin-left: auto;
+  }
+}
+
+.task-manager-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.input-container {
+  width: clamp(300px, 100%, 600px);
+  display: flex;
+  gap: 0.5rem;
+  /* padding: 1rem;
+  box-shadow: 1px 1px 10px gray; */
+  border-radius: 0.6rem;
+}
+
+input[type="text"] {
+  border-radius: 0.3rem;
+  padding: 0 0.7rem;
+  background-color: #e4e4e4;
+  height: 3rem;
+  width: 100%;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.task-container {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1rem;
+  width: clamp(300px, 100%, 600px);
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+
+  & > :last-child {
+    margin-top: auto;
+  }
+}
+
+.count {
+  border: 1px solid 007bff;
+  border-radius: 100%;
+  height: 17px;
+  width: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.79rem;
+  background-color: #007bff;
+  color: #f1f1f1;
+  font-weight: bold;
+}
+
+.glider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 33.33%;
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.glider.all {
+  transform: translateX(0);
+}
+
+.glider.ongoing {
+  transform: translateX(calc(100%));
+}
+
+.glider.completed {
+  transform: translateX(calc(200%));
+}
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  margin-bottom: 5px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 45px;
+}
+
+.tab {
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  font-family: "Poppins-Medium";
+  font-size: 13px;
+  position: relative;
+  transition: 0.3s ease;
+  white-space: nowrap;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  color: white;
+}
+
+.tab1 ~ .glider {
+  transform: translateX(-7px);
+}
+.tab2 ~ .glider {
+  transform: translateX(256px);
+}
+
+.task-item {
+  display: flex;
+  background-color: rgb(219, 226, 226);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0.7rem;
+  gap: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background-color 0.5s ease;
+}
+
+.task-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  background-color: chartreuse;
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  width: 100px;
+  &:hover {
+    background-color: cadetblue;
+  }
+}
+
+input[type="checkbox"] {
+  width: 23px;
+  height: 23px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0.9rem 0.2rem;
+  height: 430px;
+  overflow-y: scroll;
+}
+
+.count-ongoing {
+  background-color: var(--color-ongoing);
+}
+.count-completed {
+  background-color: var(--color-completed);
+}
+
+.total-count {
+  border-top: 2px solid gray;
+  text-align: center;
+  padding-top: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.empty-list {
+  margin: auto;
+}
+
+@media screen and (width <= 480px) {
+  .tab {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+  .glider {
+    height: 2px;
+  }
+}
+
+@media screen and (width <= 550px) {
+  .count {
+    height: 17px;
+    width: 17px;
+    font-size: 11px;
+    font-family: "Poppins-Medium";
+  }
+}
+
+@media screen and (width <= 768px) {
+  /* .glider {
+    width: 270px;
+    left: 33px;
+  } */
+
+  .tab {
+    font-size: 14px;
+    padding: 6px 5px;
+    color: #000;
+  }
+
+  .glider {
+    height: 3px;
+  }
+}

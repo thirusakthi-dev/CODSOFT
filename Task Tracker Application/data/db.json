@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "id": 1, "task": "Task 01", "checked": true, "status": "completed" },
+    { "id": 2, "task": "Task 02", "checked": false, "status": "ongoing" },
+    { "id": 3, "task": "Task 03", "checked": true, "status": "completed" }
+  ]
+}
